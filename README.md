@@ -46,14 +46,14 @@ OpenAPI JSON:
 
 ## Endpoints principales
 **Productos**
-Método----------Endpoint---------------------------Descripción
-GET-------------/api/productos---------------------Listar todos los productos
-GET-------------/api/productos/{id}----------------Obtener un producto por ID
-GET-------------/api/productos/categoria/{cat}-----Filtrar por categoría
-POST------------/api/productos---------------------Crear un producto
-PUT-------------/api/productos/{id}----------------Actualizar un producto
-PATCH	----------/api/productos/{id}/stock----------Actualizar solo el stock
-DELETE----------/api/productos/{id}----------------Eliminar un producto
+- Método----------Endpoint---------------------------Descripción
+- GET-------------/api/productos---------------------Listar todos los productos
+- GET-------------/api/productos/{id}----------------Obtener un producto por ID
+- GET-------------/api/productos/categoria/{cat}-----Filtrar por categoría
+- POST------------/api/productos---------------------Crear un producto
+- PUT-------------/api/productos/{id}----------------Actualizar un producto
+- PATCH	----------/api/productos/{id}/stock----------Actualizar solo el stock
+- DELETE----------/api/productos/{id}----------------Eliminar un producto
 
 ## Acceso a H2 Console
 
