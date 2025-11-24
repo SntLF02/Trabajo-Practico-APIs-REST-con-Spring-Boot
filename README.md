@@ -84,7 +84,7 @@ Formato estándar:
 
 ## Prueba POST
 
-![POST Producto](docs/post-producto.PNG)
+![POST Producto](docs/post-create-product.PNG)
 
 ## Prueba GET
 
@@ -96,7 +96,7 @@ Formato estándar:
 
 ## Error 400 - Validación
 
-![Error 400](docs/error-400.PNG)
+![Error 400](docs/error-400-validacion.PNG)
 
 ## Consola H2
 
