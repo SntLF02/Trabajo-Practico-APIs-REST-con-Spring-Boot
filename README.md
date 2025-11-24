@@ -80,27 +80,27 @@ Formato estándar:
 
 ## Documentación de Swagger
 
-![Swagger Endpoints](docs/swagger-endpoints.png)
+![Swagger Endpoints](docs/swagger-endpoints.PNG)
 
 ## Prueba POST
 
-![POST Producto](docs/post-producto.png)
+![POST Producto](docs/post-producto.PNG)
 
 ## Prueba GET
 
-![GET Productos](docs/get-productos.png)
+![GET Productos](docs/get-productos.PNG)
 
 ## Error 404 - Producto no existe
 
-![Error 404](docs/error-404.png)
+![Error 404](docs/error-404.PNG)
 
 ## Error 400 - Validación
 
-![Error 400](docs/error-400.png)
+![Error 400](docs/error-400.PNG)
 
 ## Consola H2
 
-![Consola H2](docs/h2-console.png)
+![Consola H2](docs/h2-console.PNG)
 
 ## Autor
 
