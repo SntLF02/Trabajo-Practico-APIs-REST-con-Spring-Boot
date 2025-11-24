@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,7 +50,7 @@ public class ProductoController {
     @Operation(summary = "Crear un producto", description = "Crea un nuevo producto en el sistema")
     @ApiResponse(responseCode = "201", description = "Producto creado correctamente")
     @PostMapping
-    public ResponseEntity<ProductoResponseDTO> crearProducto(@RequestBody ProductoDTO dto) {
+    public ResponseEntity<ProductoResponseDTO> crearProducto(@Valid @RequestBody ProductoDTO dto) {
         Producto producto = productoService.mapToEntity(dto);
         Producto creado = productoService.crearProducto(producto);
         return ResponseEntity.ok(productoService.mapToResponseDTO(creado));
