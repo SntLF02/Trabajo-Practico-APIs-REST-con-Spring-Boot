@@ -21,7 +21,7 @@ Trabajo práctico de UTN sobre desarrollo de APIs REST utilizando **Spring Boot*
 
 1. Clonar el repositorio:
 
-   git clone https://github.com/TU-USUARIO/Trabajo-Practico-APIs-REST-con-Spring-Boot.git
+   git clone https://github.com/SntLF02/Trabajo-Practico-APIs-REST-con-Spring-Boot.git
 
 2. Abrir el proyecto en IntelliJ/Eclipse/VSCode.
 
@@ -47,13 +47,13 @@ OpenAPI JSON:
 ## Endpoints principales
 **Productos**
 Método	       Endpoint	                        Descripción
-GET	           /api/productos	                Listar todos los productos
-GET	           /api/productos/{id}	            Obtener un producto por ID
-GET	           /api/productos/categoria/{cat}	Filtrar por categoría
-POST       	   /api/productos	                Crear un producto
-PUT	           /api/productos/{id}	            Actualizar un producto
-PATCH	       /api/productos/{id}/stock	    Actualizar solo el stock
-DELETE	       /api/productos/{id}	            Eliminar un producto
+GET	          /api/productos	                  Listar todos los productos
+GET	          /api/productos/{id}	               Obtener un producto por ID
+GET	          /api/productos/categoria/{cat}	   Filtrar por categoría
+POST       	    /api/productos	                  Crear un producto
+PUT	          /api/productos/{id}	               Actualizar un producto
+PATCH	          /api/productos/{id}/stock	         Actualizar solo el stock
+DELETE	       /api/productos/{id}	               Eliminar un producto
 
 ## Acceso a H2 Console
 
