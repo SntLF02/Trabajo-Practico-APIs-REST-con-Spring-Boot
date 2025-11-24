@@ -1,5 +1,6 @@
 package com.utn.productos.service;
 
+import com.utn.productos.exception.ProductoNotFoundException;
 import com.utn.productos.model.Producto;
 import com.utn.productos.model.Categoria;
 import com.utn.productos.repository.ProductoRepository;
@@ -37,7 +38,7 @@ public class ProductoService {
 
     public Producto actualizarProducto(Long id, Producto productoActualizado) {
         Producto existente = productoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Producto no encontrado con id: " + id));
+                .orElseThrow(() -> new ProductoNotFoundException(id));
 
         existente.setNombre(productoActualizado.getNombre());
         existente.setDescripcion(productoActualizado.getDescripcion());
@@ -50,7 +51,7 @@ public class ProductoService {
 
     public Producto actualizarStock(Long id, Integer nuevoStock) {
         Producto existente = productoRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Producto no encontrado con id: " + id));
+                .orElseThrow(() -> new ProductoNotFoundException(id));
 
         existente.setStock(nuevoStock);
         return productoRepository.save(existente);
