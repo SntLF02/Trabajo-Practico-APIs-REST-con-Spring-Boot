@@ -4,6 +4,8 @@ import com.utn.productos.model.Producto;
 import com.utn.productos.model.Categoria;
 import com.utn.productos.repository.ProductoRepository;
 import org.springframework.stereotype.Service;
+import com.utn.productos.dto.ProductoDTO;
+import com.utn.productos.dto.ProductoResponseDTO;
 
 import java.util.List;
 import java.util.Optional;
@@ -57,4 +59,32 @@ public class ProductoService {
     public void eliminarProducto(Long id) {
         productoRepository.deleteById(id);
     }
+
+    public Producto mapToEntity(ProductoDTO dto) {
+        return Producto.builder()
+                .nombre(dto.getNombre())
+                .descripcion(dto.getDescripcion())
+                .precio(dto.getPrecio())
+                .stock(dto.getStock())
+                .categoria(dto.getCategoria())
+                .build();
+    }
+
+    public ProductoResponseDTO mapToResponseDTO(Producto producto) {
+        return ProductoResponseDTO.builder()
+                .id(producto.getId())
+                .nombre(producto.getNombre())
+                .descripcion(producto.getDescripcion())
+                .precio(producto.getPrecio())
+                .stock(producto.getStock())
+                .categoria(producto.getCategoria())
+                .build();
+    }
+
+    public List<ProductoResponseDTO> mapToResponseList(List<Producto> productos) {
+        return productos.stream()
+                .map(this::mapToResponseDTO)
+                .toList();
+    }
+
 }
